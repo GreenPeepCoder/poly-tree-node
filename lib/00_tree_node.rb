@@ -26,4 +26,9 @@ class PolyTreeNode
             node.parent=(self)
         end
     end
+
+    def dfs(target)
+        return self if target == self.value
+    end
+
 end
