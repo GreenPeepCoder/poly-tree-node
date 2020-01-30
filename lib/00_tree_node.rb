@@ -20,4 +20,10 @@ class PolyTreeNode
         raise error if @children.include?(node) == false
         node.parent=(nil)
     end
+
+    def add_child(node)
+        if @children.include?(node) == false
+            node.parent=(self)
+        end
+    end
 end
