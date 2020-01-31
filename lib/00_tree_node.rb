@@ -37,7 +37,6 @@ class PolyTreeNode
     end
 
     def bfs(target)
-        return self if target == self.value
         queue = Array.new()
         queue << self
         until queue.empty?
@@ -46,5 +45,5 @@ class PolyTreeNode
             el.children.each{ |child| queue << child}
         end
     end
-        
+
 end
